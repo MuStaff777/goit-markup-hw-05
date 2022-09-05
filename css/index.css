@@ -14,6 +14,8 @@
   --text-color: #212121;
   --address-color: #2196F3;
   --button-color: rgb(130, 187, 245);
+  --overlay-color: rgba(33, 150, 243, 0.9);
+  --transition-dur-and-func: 250ms linear;
 }
 
 h1,
@@ -167,6 +169,7 @@ body {
   border: none;
   background-color: var(--button-list-color);
   color: var(--text-color);
+  transition: var(--transition-dur-and-func);
 }
 
 .buttonhover:hover,
@@ -202,6 +205,34 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 6px 4px rgba(0, 0, 0, 0.16);
 }
 
+.team-list-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 370px;
+  font-family: var(--primary-font);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--overlay-color);
+  color: var(--title-text-color);
+  padding: 63px 24px;
+  line-height: 28px;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: var(--transition-dur-and-func);
+}
+
+.work-container:hover .overlay,
+.work-container:focus .overlay {
+  transform:translateY(0%);
+} 
 
 .container-work {
   padding-top: 20px;
