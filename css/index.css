@@ -229,8 +229,8 @@ body {
   transition: var(--transition-dur-and-func);
 }
 
-.work-container:hover .overlay,
-.work-container:focus .overlay {
+.team-list-img-wrapper:hover .overlay,
+.team-list-img-wrapper:focus .overlay {
   transform:translateY(0%);
 } 
 
